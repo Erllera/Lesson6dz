@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_image"
+        android:scaleType="center"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_marginTop="300dp"
+        android:id="@+id/hello_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text2"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:text="Добро пожаловать"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/fairymuffinroundpop"/>
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@id/login"
+        android:layout_marginBottom="36dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Выполните вход \n или зарегистрируйтесь"
+        android:fontFamily="@font/fairymuffinroundpop"
+        app:layout_constraintStart_toStartOf="@id/hello_text"
+        app:layout_constraintEnd_toEndOf="@id/hello_text"
+
+        android:gravity="center"
+        android:textSize="18sp"/>
+
+    <EditText
+        app:layout_constraintBottom_toTopOf="@id/pass"
+        android:id="@+id/login"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/custon_input"
+        android:paddingStart="20sp"
+        android:backgroundTint="@color/white"
+        android:hint="Введите вашу почту"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/hello_text"
+        app:layout_constraintStart_toStartOf="@id/hello_text"
+        app:layout_constraintTop_toBottomOf="@id/hello_text" />
+
+    <EditText
+        app:layout_constraintBottom_toTopOf="@id/btn"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/pass"
+        android:layout_width="380dp"
+        android:paddingStart="20sp"
+        android:layout_height="55dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/custon_input"
+        android:backgroundTint="@color/white"
+        android:hint="Введите пароль"
+        app:layout_constraintEnd_toEndOf="@id/login"
+        app:layout_constraintStart_toStartOf="@id/login"
+        app:layout_constraintTop_toBottomOf="@id/login" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn"
+        android:layout_width="380dp"
+        android:layout_height="65sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/btn_color"
+        android:fontFamily="@font/fairymuffinroundpop"
+        android:text="Войти"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/pass"
+        app:layout_constraintStart_toStartOf="@id/pass"
+        app:layout_constraintTop_toBottomOf="@id/pass" />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
